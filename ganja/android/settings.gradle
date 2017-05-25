@@ -1,0 +1,3 @@
+rootProject.name = 'ganja'
+
+include ':app'
