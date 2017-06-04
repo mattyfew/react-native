@@ -1,77 +1,273 @@
-[debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
-[debug] CLI Version:  3.9.0
-[debug] Platform:     darwin
-[debug] Node Version: v8.0.0
-[debug] Time:         Wed May 31 2017 19:47:47 GMT+0200 (CEST)
-[debug] ----------------------------------------------------------------------
+[debug] [2017-06-03T20:44:56.897Z] ----------------------------------------------------------------------
+[debug] [2017-06-03T20:44:56.900Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
+[debug] [2017-06-03T20:44:56.901Z] CLI Version:  3.9.1
+[debug] [2017-06-03T20:44:56.901Z] Platform:     darwin
+[debug] [2017-06-03T20:44:56.901Z] Node Version: v8.0.0
+[debug] [2017-06-03T20:44:56.901Z] Time:         Sat Jun 03 2017 22:44:56 GMT+0200 (CEST)
+[debug] [2017-06-03T20:44:56.901Z] ----------------------------------------------------------------------
 [debug] 
-[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/otEOyNIMEBIg1AgkVYe1mV40f3B85xdwazNZYOwCri8',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed May 31 2017 19:47:47 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
- Wed May 31 2017 19:47:47 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
- Wed May 31 2017 19:47:48 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:44:56.933Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-03T20:44:56.934Z] > authorizing via signed-in user
+[debug] [2017-06-03T20:44:56.936Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
+ Sat Jun 03 2017 22:44:56 GMT+0200 (CEST)
+[debug] [2017-06-03T20:44:58.214Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:44:58.216Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
+ Sat Jun 03 2017 22:44:58 GMT+0200 (CEST)
+[debug] [2017-06-03T20:44:58.838Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Deploying to 'one-time-password-93597'...
 [info] 
 [info] i  deploying functions
-[debug] > [functions] package.json contents: {
+[debug] [2017-06-03T20:45:00.589Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
     "firebase-admin": "~4.2.1",
-    "firebase-functions": "^0.5.7"
+    "firebase-functions": "^0.5.7",
+    "twilio": "^3.3.0"
   },
   "private": true
 }
 [info] i  functions: ensuring necessary APIs are enabled...
 [info] i  runtimeconfig: ensuring necessary APIs are enabled...
-[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
- Wed May 31 2017 19:47:50 GMT+0200 (CEST)
-[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
- Wed May 31 2017 19:47:50 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:45:00.592Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:45:00 GMT+0200 (CEST)
+[debug] [2017-06-03T20:45:00.593Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:45:00 GMT+0200 (CEST)
+[debug] [2017-06-03T20:45:01.972Z] <<< HTTP RESPONSE 200
 [info] ✔  functions: all necessary APIs are enabled
-[debug] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:45:02.785Z] <<< HTTP RESPONSE 200
 [info] ✔  runtimeconfig: all necessary APIs are enabled
-[debug] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
- Wed May 31 2017 19:47:52 GMT+0200 (CEST)
-[debug] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
- Wed May 31 2017 19:47:52 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
-[debug] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:45:02.787Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
+ Sat Jun 03 2017 22:45:02 GMT+0200 (CEST)
+[debug] [2017-06-03T20:45:02.788Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
+ Sat Jun 03 2017 22:45:02 GMT+0200 (CEST)
+[debug] [2017-06-03T20:45:03.643Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:45:04.080Z] <<< HTTP RESPONSE 200
 [info] i  functions: preparing functions directory for uploading...
-[debug] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
- Wed May 31 2017 19:47:54 GMT+0200 (CEST)
-[debug] <<< HTTP RESPONSE 200
-[debug] > [functions] runtime config materialized as: {
-  "firebase": {
-    "databaseURL": "https://one-time-password-93597.firebaseio.com",
-    "storageBucket": "one-time-password-93597.appspot.com",
-    "apiKey": "AIzaSyDXG82imihwtZDzBkNOA14wTUEeaC4iM70",
-    "authDomain": "one-time-password-93597.firebaseapp.com"
-  }
+[debug] [2017-06-03T20:45:13.638Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
+ Sat Jun 03 2017 22:45:13 GMT+0200 (CEST)
+[debug] [2017-06-03T20:45:14.204Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:45:16.653Z] TypeError: Cannot read property 'pipesCount' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-06-03T20:53:06.193Z] ----------------------------------------------------------------------
+[debug] [2017-06-03T20:53:06.197Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
+[debug] [2017-06-03T20:53:06.198Z] CLI Version:  3.9.1
+[debug] [2017-06-03T20:53:06.198Z] Platform:     darwin
+[debug] [2017-06-03T20:53:06.198Z] Node Version: v8.0.0
+[debug] [2017-06-03T20:53:06.198Z] Time:         Sat Jun 03 2017 22:53:06 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:06.199Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-03T20:53:06.291Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-03T20:53:06.292Z] > authorizing via signed-in user
+[debug] [2017-06-03T20:53:06.301Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
+ Sat Jun 03 2017 22:53:06 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:07.470Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:53:07.472Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
+ Sat Jun 03 2017 22:53:07 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:08.113Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-93597'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-06-03T20:53:09.984Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7",
+    "twilio": "^3.3.0"
+  },
+  "private": true
 }
-[debug] TypeError: Cannot read property 'pipesCount' of undefined
-    at module.exports.Readable.pipe (_stream_readable.js:545:16)
-    at module.exports.ZipArchiveOutputStream._smartStream (/usr/local/lib/node_modules/firebase-tools/node_modules/compress-commons/lib/archivers/zip/zip-archive-output-stream.js:171:11)
-    at module.exports.ZipArchiveOutputStream._appendStream (/usr/local/lib/node_modules/firebase-tools/node_modules/compress-commons/lib/archivers/zip/zip-archive-output-stream.js:94:20)
-    at module.exports.ArchiveOutputStream.entry (/usr/local/lib/node_modules/firebase-tools/node_modules/compress-commons/lib/archivers/archive-output-stream.js:89:10)
-    at module.exports.ZipStream.entry (/usr/local/lib/node_modules/firebase-tools/node_modules/zip-stream/lib/zip-stream.js:105:49)
-    at module.exports.Zip.append (/usr/local/lib/node_modules/firebase-tools/node_modules/archiver/lib/plugins/zip.js:30:15)
-    at module.exports.Archiver._moduleAppend (/usr/local/lib/node_modules/firebase-tools/node_modules/archiver/lib/core.js:123:16)
-    at module.exports.Archiver._onQueueTask (/usr/local/lib/node_modules/firebase-tools/node_modules/archiver/lib/core.js:246:8)
-    at /usr/local/lib/node_modules/firebase-tools/node_modules/archiver/node_modules/async/lib/async.js:945:13
-    at Immediate.process [as _onImmediate] (/usr/local/lib/node_modules/firebase-tools/node_modules/archiver/node_modules/async/lib/async.js:913:25)
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-06-03T20:53:09.986Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:53:09 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:09.987Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:53:09 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:11.355Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-06-03T20:53:11.398Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-06-03T20:53:11.400Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
+ Sat Jun 03 2017 22:53:11 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:11.401Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
+ Sat Jun 03 2017 22:53:11 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:12.359Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:53:13.126Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-06-03T20:53:18.415Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
+ Sat Jun 03 2017 22:53:18 GMT+0200 (CEST)
+[debug] [2017-06-03T20:53:19.647Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:53:20.496Z] TypeError: Cannot read property 'pipesCount' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-06-03T20:54:28.226Z] ----------------------------------------------------------------------
+[debug] [2017-06-03T20:54:28.230Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
+[debug] [2017-06-03T20:54:28.231Z] CLI Version:  3.9.1
+[debug] [2017-06-03T20:54:28.231Z] Platform:     darwin
+[debug] [2017-06-03T20:54:28.231Z] Node Version: v8.0.0
+[debug] [2017-06-03T20:54:28.232Z] Time:         Sat Jun 03 2017 22:54:28 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:28.232Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-03T20:54:28.250Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-03T20:54:28.250Z] > authorizing via signed-in user
+[debug] [2017-06-03T20:54:28.258Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
+ Sat Jun 03 2017 22:54:28 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:29.231Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:54:29.232Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
+ Sat Jun 03 2017 22:54:29 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:30.281Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-93597'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-06-03T20:54:31.647Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7",
+    "twilio": "^3.3.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-06-03T20:54:31.649Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:54:31 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:31.649Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sat Jun 03 2017 22:54:31 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:33.037Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-06-03T20:54:34.322Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-06-03T20:54:34.324Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
+ Sat Jun 03 2017 22:54:34 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:34.324Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
+ Sat Jun 03 2017 22:54:34 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:35.455Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:54:35.473Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-06-03T20:54:39.640Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
+ Sat Jun 03 2017 22:54:39 GMT+0200 (CEST)
+[debug] [2017-06-03T20:54:41.014Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T20:54:41.980Z] TypeError: Cannot read property 'pipesCount' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-06-04T07:01:08.986Z] ----------------------------------------------------------------------
+[debug] [2017-06-04T07:01:08.990Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
+[debug] [2017-06-04T07:01:08.991Z] CLI Version:  3.9.1
+[debug] [2017-06-04T07:01:08.991Z] Platform:     darwin
+[debug] [2017-06-04T07:01:08.991Z] Node Version: v8.0.0
+[debug] [2017-06-04T07:01:08.992Z] Time:         Sun Jun 04 2017 09:01:08 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:08.992Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-04T07:01:09.010Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-04T07:01:09.010Z] > authorizing via signed-in user
+[debug] [2017-06-04T07:01:09.013Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-04T07:01:09.013Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/otEOyNIMEBIg1AgkVYe1mV40f3B85xdwazNZYOwCri8',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jun 04 2017 09:01:09 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:09.245Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:01:09.261Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
+ Sun Jun 04 2017 09:01:09 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:10.423Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:01:10.424Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
+ Sun Jun 04 2017 09:01:10 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:11.125Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-93597'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-06-04T07:01:12.587Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7",
+    "twilio": "^3.3.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-06-04T07:01:12.589Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sun Jun 04 2017 09:01:12 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:12.590Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sun Jun 04 2017 09:01:12 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:13.811Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-06-04T07:01:13.900Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-06-04T07:01:13.901Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
+ Sun Jun 04 2017 09:01:13 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:13.901Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
+ Sun Jun 04 2017 09:01:13 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:14.927Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:01:15.821Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-06-04T07:01:19.470Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
+ Sun Jun 04 2017 09:01:19 GMT+0200 (CEST)
+[debug] [2017-06-04T07:01:19.788Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:01:20.543Z] TypeError: Cannot read property 'pipesCount' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-06-04T07:07:18.984Z] ----------------------------------------------------------------------
+[debug] [2017-06-04T07:07:18.988Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-93597
+[debug] [2017-06-04T07:07:18.989Z] CLI Version:  3.9.1
+[debug] [2017-06-04T07:07:18.989Z] Platform:     darwin
+[debug] [2017-06-04T07:07:18.989Z] Node Version: v8.0.0
+[debug] [2017-06-04T07:07:18.990Z] Time:         Sun Jun 04 2017 09:07:18 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:18.990Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-04T07:07:19.011Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-04T07:07:19.011Z] > authorizing via signed-in user
+[debug] [2017-06-04T07:07:19.014Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-93597  
+ Sun Jun 04 2017 09:07:19 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:20.272Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:07:20.274Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-93597/tokens  
+ Sun Jun 04 2017 09:07:20 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:20.949Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-93597'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-06-04T07:07:22.414Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7",
+    "twilio": "^3.3.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-06-04T07:07:22.416Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sun Jun 04 2017 09:07:22 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:22.417Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-93597?view=CONSUMER_VIEW  
+ Sun Jun 04 2017 09:07:22 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:24.055Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-06-04T07:07:24.079Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-06-04T07:07:24.080Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-93597  
+ Sun Jun 04 2017 09:07:24 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:24.080Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-93597/apiKeys  
+ Sun Jun 04 2017 09:07:24 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:25.029Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:07:25.113Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-06-04T07:07:28.230Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/one-time-password-93597/configs  
+ Sun Jun 04 2017 09:07:28 GMT+0200 (CEST)
+[debug] [2017-06-04T07:07:28.530Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-04T07:07:29.446Z] TypeError: Cannot read property 'pipesCount' of undefined
 [error] 
 [error] Error: An unexpected error has occurred.
