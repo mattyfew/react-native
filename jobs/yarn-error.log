@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Users/mattfewer/bin:/usr/local/bin:/Users/mattfewer/.rbenv/shims:/Users/mattfewer/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:./node_modules/.bin
+
+Yarn version: 
+  0.24.5
+
+Node version: 
+  8.0.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "jobs",
+    "version": "0.0.0",
+    "description": "Hello Expo!",
+    "author": null,
+    "private": true,
+    "main": "main.js",
+    "dependencies": {
+      "expo": "17.0.0",
+      "react": "16.0.0-alpha.6",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
+      "react-native-elements": "^0.12.2",
+      "react-navigation": "^1.0.0-beta.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz: ENOENT: no such file or directory, utime '/Users/mattfewer/Library/Caches/Yarn/v1/.tmp/6d8ca6b2a90f52f0ad15645e97fa550b/blog/img/git-upgrade-output.png'
