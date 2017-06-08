@@ -3,15 +3,17 @@ import { View, Text } from 'react-native'
 
 class SettingsScreen extends Component {
     render() {
-        <View>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-            <Text>SettingsScreen</Text>
-        </View>
+        return (
+            <View>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+                <Text>SettingsScreen</Text>
+            </View>
+        )
     }
 }
 

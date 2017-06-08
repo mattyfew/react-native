@@ -3,15 +3,17 @@ import { View, Text } from 'react-native'
 
 class MapScreen extends Component {
     render() {
-        <View>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-            <Text>MapScreen</Text>
-        </View>
+        return (
+            <View>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+                <Text>MapScreen</Text>
+            </View>
+        )
     }
 }
 

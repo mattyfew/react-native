@@ -18,9 +18,7 @@ class WelcomeScreen extends Component {
         console.log("WelcomeScreen rendering");
 
         return (
-            <View>
                 <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />
-            </View>
         )
     }
 }

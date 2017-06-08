@@ -22,15 +22,17 @@ class ReviewScreen extends Component {
     }
 
     render() {
-        <View>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-            <Text>ReviewScreen</Text>
-        </View>
+        return(
+            <View>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+                <Text>ReviewScreen</Text>
+            </View>
+        )
     }
 }
 
