@@ -5,7 +5,7 @@ import * as actions from '../actions';
 
 class AuthScreen extends Component {
     componentDidMount() {
-        // this.props.facebookLogin()
+        this.props.facebookLogin()
     }
 
     render() {
@@ -23,4 +23,4 @@ class AuthScreen extends Component {
     }
 }
 
-export default connect(null, { actions })(AuthScreen)
+export default connect(null, actions)(AuthScreen)
